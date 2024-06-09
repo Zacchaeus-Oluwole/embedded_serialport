@@ -6,7 +6,7 @@ import 'package:ffi/ffi.dart';
 
 
 final DynamicLibrary rustLib = Platform.isLinux
-    ? DynamicLibrary.open('../embedded_serialport/lib/src/rust_native/librust_serialport.so') // Update with the actual name of the compiled Rust library
+    ? DynamicLibrary.open('rust_native/librust_serialport.so') // Update with the actual name of the compiled Rust library
     : DynamicLibrary.process();
 
 // ignore: camel_case_types
