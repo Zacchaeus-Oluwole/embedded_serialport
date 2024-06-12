@@ -13,10 +13,10 @@ and the Flutter guide for
 
 # embedded_serialport
 
-`embedded_serialport` is a Flutter package for serial port communication, it uses Dart FFI (Foreign Function Interface) to interact with Rust and C shared libraries. This package provides a simple API to list available serial ports and perform read/write operations.
+`embedded_serialport` is a Flutter package for serial port communication, it uses Dart FFI (Foreign Function Interface) to interact with Rust and C shareable libraries. This package provides a simple API to list available serial ports and perform read/write operations.
 
 ## Platform Support
-|   Linux:  | Ubuntu |
+- Linux
 
 ## Features
 
@@ -112,3 +112,18 @@ Enumeration of common baud rates:
 - `Baudrate.b57600`
 - `Baudrate.b115200`
 - And more...
+
+## Author
+### Zacchaeus Oluwole
+
+LinkedIn: <https://www.linkedin.com/in/zacchaeus-oluwole/>
+
+X: <https://x.com/ZTechPlus>
+
+Email: <zacchaeusoluwole@gmail.com>
+
+Github: <https://github.com/Zacchaeus-Oluwole>
+
+
+## Credit
+### Peter Sauer <https://flutterdev.at/dart_periphery/>

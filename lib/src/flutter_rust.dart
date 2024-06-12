@@ -4,9 +4,34 @@ import 'dart:ffi';
 import 'dart:io';
 import 'package:ffi/ffi.dart';
 
+import 'package:path/path.dart' as path;
+
+String getLibraryPath() {
+  // Determine the location of the .pub-cache directory
+  final String pubCacheDir = path.join(
+    Platform.environment['HOME']!,
+    '.pub-cache',
+    'hosted',
+    'pub.dev',
+    'embedded_serialport-0.0.4',
+    'lib',
+    'src',
+    'rust_native',
+  );
+
+  // Construct the full path to the shared library
+  final String libPath = path.join(pubCacheDir, 'librust_serialport.so');
+
+  if (File(libPath).existsSync()) {
+    return libPath;
+  } else {
+    throw Exception('Library not found at $libPath');
+  }
+}
+
 
 final DynamicLibrary rustLib = Platform.isLinux
-    ? DynamicLibrary.open('rust_native/librust_serialport.so') // Update with the actual name of the compiled Rust library
+    ? DynamicLibrary.open(getLibraryPath()) // Update with the actual name of the compiled Rust library
     : DynamicLibrary.process();
 
 // ignore: camel_case_types
