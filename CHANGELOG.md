@@ -7,4 +7,7 @@
 ## 0.0.32-dev.1
 ## 0.0.4
 ## 0.0.32
-## 0.0.39
+## 0.0.33
+## 1.0.0
+* Added dependencies
+* Added check for permissions

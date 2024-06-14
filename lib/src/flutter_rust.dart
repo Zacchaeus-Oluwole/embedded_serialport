@@ -13,7 +13,7 @@ String getLibraryPath() {
     '.pub-cache',
     'hosted',
     'pub.dev',
-    'embedded_serialport-0.0.39',
+    'embedded_serialport-1.0.0',
     'lib',
     'src',
     'rust_native',

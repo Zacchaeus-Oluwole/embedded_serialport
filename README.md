@@ -40,6 +40,30 @@ flutter pub add embedded_serialport
 dart pub add embedded_serialport
 ```
 
+## Dependencies
+
+#### For GNU/Linux `pkg-config` headers are required:
+
+- Ubuntu: `sudo apt install pkg-config`
+- Fedora: `sudo dnf install pkgconf-pkg-config`
+
+For other distros they may provide `pkg-config` through the `pkgconf` package instead.
+
+#### For GNU/Linux `libudev` headers are required as well (unless you disable the default `libudev` feature):
+
+- Ubuntu: `sudo apt install libudev-dev`
+- Fedora: `sudo dnf install systemd-devel`
+
+## Check for Permissions:
+- Linux: Ensure your user is part of the `dialout` group or equivalent.
+
+  ```bash
+  sudo usermod -aG dialout $USER
+  ```
+  Then log out and log back in.
+
+Without setting your user to be part of the `dialout`, you will receive this error:  `SerialErrorCode.serialErrorOpen`
+
 ## Usage
 Import the package in your Dart code:
 ```dart
