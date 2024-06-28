@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 // https://github.com/vsergeev/c-periphery/blob/master/docs/serial.md
 // https://github.com/vsergeev/c-periphery/blob/master/src/serial.c
@@ -809,5 +808,4 @@ class Serial {
     List<String> listOfPorts = portsString.split(",");
     return listOfPorts;
   }
-
 }

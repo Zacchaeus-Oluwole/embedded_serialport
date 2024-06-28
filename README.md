@@ -64,6 +64,17 @@ For other distros they may provide `pkg-config` through the `pkgconf` package in
 
 Without setting your user to be part of the `dialout`, you will receive this error:  `SerialErrorCode.serialErrorOpen`
 
+## NB: Prepare Linux apps for distribution
+To build flutter applciation as release run the following command:
+```bash
+flutter build linux --release
+```
+After that, go to **build/linux/release/bundle/** and run the application using the following command:
+```bash
+./projectname
+```
+"_By runnung the application in the directory, a file will be automatically copied to **lib** folder with the following directory **src/rust_native/librust_serialport.so**. This file is responsible for this library to work in your application._"
+
 ## Usage
 Import the package in your Dart code:
 ```dart

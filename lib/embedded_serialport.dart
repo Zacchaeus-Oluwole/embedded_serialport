@@ -1,5 +1,3 @@
-library embedded_serialport;
-
 export 'src/serial.dart'
     show
         SerialReadEvent,
@@ -10,5 +8,3 @@ export 'src/serial.dart'
         SerialErrorCode,
         Parity,
         Serial;
-
-// export 'src/flutter_rust.dart' show getPorts;
