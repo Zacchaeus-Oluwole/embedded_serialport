@@ -1,19 +1,7 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
 
 # embedded_serialport
 
-`embedded_serialport` is a Flutter package for serial port communication, it uses Dart FFI (Foreign Function Interface) to interact with Rust and C shareable libraries. This package provides a simple API to list available serial ports and perform read/write operations.
+`embedded_serialport` is a Flutter package for serial port communication, it uses Dart FFI (Foreign Function Interface) to interact with Rust and C shareable libraries. This package provides a simple API to list available serial ports and perform read/write operations. Check out this [article](https://medium.com/@zacchaeusoluwole/building-a-flutter-application-for-serial-port-communication-with-embedded-system-using-9b9cefa8c9ae) and the example [demo.](https://www.youtube.com/watch?v=CzzDUZWhpGI)
 
 ## Platform Support
 - Linux
@@ -27,18 +15,14 @@ and the Flutter guide for
 
 ## Installation
 
-To install `embedded_serialport`, use either `flutter pub add` or `dart pub add`, depending on your project type:
+To install `embedded_serialport`, use `flutter pub add`:
 
 ### Flutter
 
 ```bash
 flutter pub add embedded_serialport
 ```
-### Dart
 
-```bash
-dart pub add embedded_serialport
-```
 
 ## Dependencies
 
