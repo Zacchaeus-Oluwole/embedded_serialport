@@ -11,7 +11,7 @@ const pkgName = 'dart_periphery';
 
 const String version = '1.0.0';
 
-final String sharedLib = 'libperiphery.so';
+const String sharedLib = 'libperiphery.so';
 
 late DynamicLibrary _peripheryLib;
 bool _isPeripheryLibLoaded = false;

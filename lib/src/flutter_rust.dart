@@ -12,7 +12,7 @@ String getLibraryPath() {
     '.pub-cache',
     'hosted',
     'pub.dev',
-    'embedded_serialport-1.5.4',
+    'embedded_serialport-1.5.5',
     'lib',
     'src',
   );

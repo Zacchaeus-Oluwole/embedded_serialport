@@ -1,6 +1,6 @@
 name: embedded_serialport
 description: "`embedded_serialport` is a Flutter package for serial port communication, using Dart FFI to interact with Rust and C libraries."
-version: 1.5.4
+version: 1.5.5
 repository: https://github.com/Zacchaeus-Oluwole/embedded_serialport
 
 environment:

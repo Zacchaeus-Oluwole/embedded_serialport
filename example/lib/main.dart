@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:embedded_serialport/embedded_serialport.dart';
 
 void main() {
@@ -46,14 +45,14 @@ class _SerialPortPageState extends State<SerialPortPage> {
       _serial = Serial(_ports.first, Baudrate.b115200);
       _serial.timeout(2);
     }
-    setState(() {});
   }
 
-  void _writeString(String command) {
+  void _writeString(String command) async {
     _serial.writeString(command);
-    var event = _serial.read(20);
+    await Future.delayed(const Duration(milliseconds: 100));
+    var event = _serial.read(0);
     setState(() {
-      _output += "$command -> ${event.toString()}\n";
+      _output += "Hardware says -> ${event.toString()}\n";
     });
   }
 
@@ -76,16 +75,18 @@ class _SerialPortPageState extends State<SerialPortPage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Available Ports: ${_ports.join(", ")}'),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => _writeString('led,0'),
-              child: const Text('Send "led,0"'),
+              onPressed: () => _writeString('on'),
+              child: const Text('Send "on"'),
             ),
+            const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => _writeString('led'),
-              child: const Text('Send "led"'),
+              onPressed: () => _writeString('off'),
+              child: const Text('Send "off"'),
             ),
             const SizedBox(height: 20),
             Expanded(
